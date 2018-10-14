@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "baseUrl": "./src",
+    "sourceMap": true,
+    "module": "commonjs",
+    "lib": [
+      "es6",
+      "esnext"
+    ],
+    "target": "es6"
+  }
+}
