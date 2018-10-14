@@ -1,15 +1,13 @@
 import { Graph } from '../graph';
 import { WorldMap } from './map';
+import { Quests } from './quest';
 export class TibiaData {
-  private map: WorldMap;
+  public map: WorldMap;
+  public quests: Quests;
   constructor() {
     this.map = new WorldMap();
+    this.quests = new Quests();
   }
-  getQuest(): any {
-    throw new Error('Method not implemented.');
-  }
-  getMap(): WorldMap {
-    return this.map;
-  }
+
 }
 

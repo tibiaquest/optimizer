@@ -9,8 +9,8 @@ export class WorldMap {
   addRoute(from: NodeName, to: NodeName, distance: Distance): any {
     this.graph.addEdge(from, to, distance);
   }
-  addInfo(nodeName: NodeName, area: Area): any {
-    this.graph.addNode(nodeName, area);
+  addLocation(nodeName: NodeName, position: Position): any {
+    this.graph.addNode(nodeName, { closestLocation: nodeName, position: position });
   }
 
   getNode(name: NodeName): GraphNode<Area, Distance> {
@@ -20,11 +20,12 @@ export class WorldMap {
 
 }
 
-interface Area {
-  location: Position;
+export interface Area {
+  position: Position;
+  closestLocation: NodeName;
 }
 
-interface Position {
+export interface Position {
   x: number;
   y: number;
   z: number;
