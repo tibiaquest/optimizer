@@ -11,7 +11,7 @@ populateQuest(data);
 console.log(data.map.getNode("thais-city"))
 let completedQuestParts = []; //none
 let availableQuests = data.quests.availableQuestsFor(completedQuestParts);
-console.log("\nWith no quests complete, the available quests are the following:")
+console.log(`\nWith no (${completedQuestParts}) quests complete, the available quests are the following :`)
 availableQuests.forEach((value) => {
   console.log(value.identificator);
 });
@@ -19,7 +19,7 @@ availableQuests.forEach((value) => {
 completedQuestParts = ["the-explorer-society-quest-part1",
   "the-explorer-society-quest-part1-buypickaxeindp",
   "the-explorer-society-quest-part1-returntheaxe"]
-console.log("\nWith some quests complete, the available quests are the following:")
+console.log(`\nWith some (${completedQuestParts}) quests complete, the available quests are the following : `)
 availableQuests = data.quests.availableQuestsFor(completedQuestParts);
 availableQuests.forEach((value) => {
   console.log(value.identificator);
